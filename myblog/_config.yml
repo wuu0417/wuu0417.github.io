@@ -20,15 +20,14 @@
 
 title: 优酱的博客
 description: >- # this means to ignore newlines until "baseurl:"
-  优酱的博客，会在这里发表碎碎念和观点。如果感兴趣，就随便看看吧。
+  一个胡思乱想的大学狗
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wuu0417.github.io/myblog" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: pages-themes/cayman@v0.2.0
+theme: jekyll-text-theme
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
