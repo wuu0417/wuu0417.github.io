@@ -51,6 +51,7 @@ body, li, span, p {
 a {
     background-color: transparent;
     cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur),auto;
+    text-decoration: none; /* 取消下划线 */
 }
 strong{
     color: #FF0066;
