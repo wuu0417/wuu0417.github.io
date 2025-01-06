@@ -1,92 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>优酱的留言板</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f0f0f0;
     }
-    #authForms, #messageBoard {
-      width: 90%;
-      max-width: 400px;
-      padding: 20px;
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
       background: #fff;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    h2 {
+
+    h1 {
       text-align: center;
+      color: #333;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    input, button {
+
+    textarea {
+      width: 100%;
+      height: 100px;
       padding: 10px;
-      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
       border-radius: 4px;
+      font-size: 14px;
     }
+
     button {
-      background: #007BFF;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #4CAF50;
       color: white;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
+      font-size: 16px;
     }
+
     button:hover {
-      background: #0056b3;
+      background: #45a049;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
-    li {
-      background: #e9ecef;
+
+    .message-item {
       padding: 10px;
-      border-radius: 4px;
-      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
     }
-    .delete {
-      color: red;
+
+    .message-content {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .message-timestamp {
+      font-size: 12px;
+      color: #777;
+    }
+
+    .delete-button {
+      margin-top: 5px;
+      padding: 5px 10px;
+      background: #FF4D4D;
+      color: white;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
-      float: right;
+    }
+
+    .delete-button:hover {
+      background: #ff3333;
     }
   </style>
 </head>
 <body>
-  <div id="authForms">
-    <form id="registerForm">
-      <h2>注册</h2>
-      <input id="registerNickname" placeholder="输入你的昵称" required />
-      <input id="registerUsername" placeholder="输入你的用户名" required />
-      <button type="submit">注册</button>
-    </form>
-    <form id="loginForm" style="display: none;">
-      <h2>登录</h2>
-      <input id="loginUsername" placeholder="输入你的用户名" required />
-      <button type="submit">登录</button>
-    </form>
-    <button id="switchToLogin">已有账号？去登录</button>
-    <button id="switchToRegister" style="display: none;">没有账号？去注册</button>
+  <div class="container">
+    <h1>优酱的留言板</h1>
+    <p>注：留言板没有登录机制，只可以删除自己的留言<br>用户ID保存在浏览器的localStorage，重装浏览器后就不能删除留言了哦~</p>
+    <textarea id="messageInput" placeholder="请输入你想对我说的话..."></textarea>
+    <button onclick="submitMessage()">我写好了，提交！</button>
+    <ul class="message-list" id="messageList"></ul>
   </div>
 
-  <div id="messageBoard" style="display: none;">
-    <h2>优酱的留言板</h2>
-    <form id="messageForm">
-      <textarea id="messageContent" placeholder="请输入你想对我说的话..." required></textarea>
-      <button type="submit">我写好了，提交！</button>
-    </form>
-    <ul id="messages"></ul>
-  </div>
+  <script>
+    const apiUrl = "https://message-board-blond-xi.vercel.app/api/messages"; // 替换为你的后端 API 地址
 
-  <script src="script.js"></script>
+    // 获取或生成用户 ID
+    function getUserId() {
+      let userId = localStorage.getItem("userId");
+      if (!userId) {
+        userId = `user-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+        localStorage.setItem("userId", userId);
+      }
+      return userId;
+    }
+    const userId = getUserId();
+
+    // 加载所有留言
+    async function loadMessages() {
+      try {
+        const response = await fetch(apiUrl);
+        const messages = await response.json();
+
+        const messageList = document.getElementById("messageList");
+        messageList.innerHTML = "";
+
+        messages.forEach((msg) => {
+          const messageItem = document.createElement("li");
+          messageItem.className = "message-item";
+
+          const messageContent = document.createElement("p");
+          messageContent.className = "message-content";
+          messageContent.textContent = msg.content;
+
+          const messageTimestamp = document.createElement("p");
+          messageTimestamp.className = "message-timestamp";
+          messageTimestamp.textContent = new Date(msg.timestamp).toLocaleString();
+
+          // 删除按钮（仅对当前用户的留言显示）
+          if (msg.userId === userId) {
+            const deleteButton = document.createElement("button");
+            deleteButton.className = "delete-button";
+            deleteButton.textContent = "删除";
+            deleteButton.addEventListener("click", () => deleteMessage(msg.id));
+            messageItem.appendChild(deleteButton);
+          }
+
+          messageItem.appendChild(messageContent);
+          messageItem.appendChild(messageTimestamp);
+          messageList.appendChild(messageItem);
+        });
+      } catch (error) {
+        console.error("加载留言失败:", error);
+      }
+    }
+
+    // 提交留言
+    async function submitMessage() {
+      const messageInput = document.getElementById("messageInput");
+      const content = messageInput.value.trim();
+
+      if (!content) {
+        alert("留言内容不能为空！");
+        return;
+      }
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ content, userId }),
+        });
+
+        if (response.ok) {
+          messageInput.value = "";
+          loadMessages();
+        } else {
+          alert("提交留言失败，请稍后再试！");
+        }
+      } catch (error) {
+        console.error("提交留言失败:", error);
+      }
+    }
+
+    // 删除留言
+    async function deleteMessage(id) {
+      if (!confirm("确定要删除这条留言吗？")) return;
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id, userId }),
+        });
+
+        if (response.ok) {
+          loadMessages();
+        } else if (response.status === 403) {
+          alert("无权限删除这条留言！");
+        } else {
+          alert("删除失败，请稍后再试！");
+        }
+      } catch (error) {
+        console.error("删除留言失败:", error);
+      }
+    }
+
+    // 页面加载时加载留言
+    window.onload = loadMessages;
+  </script>
 </body>
 </html>
