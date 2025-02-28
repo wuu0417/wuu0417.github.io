@@ -1,4 +1,5 @@
 // hitokoto.js
+//这个文件里的句子因为要循环播放，必须精挑细选，都快把我整成强迫症了，所以不要随随便更新
 (function hitokoto() {
     var hitokotoArray = [
         "一个健康的人由两部分组成，即自我与爱。",
