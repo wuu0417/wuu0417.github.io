@@ -6,6 +6,7 @@
         "那些渴望用自由换取保障的，最终既得不到自由，也得不到保障。——哈耶克",
         "言论自由不是说话的自由，而是闭嘴的自由。",
         "“美利坚没有国王”的意思是“美利坚自己负责。”",
+        "自由是说“不”的权利。",
     ];
 
     var hitokoto = hitokotoArray[Math.floor(Math.random() * hitokotoArray.length)];
