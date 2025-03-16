@@ -1,0 +1,5 @@
+                            <div class="author-info__description">政治光谱：中间偏左/社会民主主义</div>
+                            <div class="author-info__description">个人立场：个人权利，自由市场，精英民主，法治</div>
+                            <div class="author-info__description">国际视角：反战主义&世界主义</div>
+                            <div class="author-info__description">世界观念：商业资本是世界秩序的核心，一切好的坏的都要以此为基础建立</div>
+                            <div class="author-info__description">精神信仰：人文主义</div>
