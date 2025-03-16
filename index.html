@@ -29,7 +29,7 @@
                     <script src="typed.js"></script>
                     <script>
                         var typed = new Typed(".blogtitle", {
-                            strings: ['你好，我是优酱','Hello, I am Youjiang'],
+                            strings: ['合作共赢','无限进步'],
                             startDelay: 300,
                             typeSpeed: 100,
                             loop: true,
@@ -79,22 +79,18 @@
                         <div class="card-content">
                             <div class="item-headline">
                                 <i class="fa fa-bullhorn" aria-hidden="true"></i>
-                                <span>人生格言</span>
+                                <span>公告</span>
                             </div>
-                            <div class="author-info__description">合作共赢，无限进步！</div>
+                            <div class="author-info__description">暂无公告</div>
                         </div>
                     </div>
                     <div class="card-widget card-announcement">
                         <div class="card-content">
                             <div class="item-headline">
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <span>个人立场</span>
+                                <span>生日</span>
                             </div>
-                            <div class="author-info__description">政治光谱：中间偏左/社会民主主义</div>
-                            <div class="author-info__description">政治立场：个人权利，自由市场，精英民主，法治，反对中国的权贵资本主义</div>
-                            <div class="author-info__description">国际视角：反战主义&世界主义</div>
-                            <div class="author-info__description">世界观念：商业资本是世界秩序的核心，一切好的坏的都要以此为基础建立</div>
-                            <div class="author-info__description">精神信仰：人文主义</div>
+                            <div class="author-info__description">Apirl 17, 2003</div>
                         </div>
                     </div>
 
@@ -119,15 +115,15 @@
                 </div>
                 <article id="page">
                     <div class="article-container">
-                        <h2>我的歌单</h2>
+                        <h2>音乐播放器</h2>
                         <meting-js auto="https://music.163.com/#/my/m/music/playlist?id=12920377667">
                         </meting-js>
 
                         <hr>
                         <h2>我的博客</h2>
                         <div class="tool">
-                            <a href="https://wuu0417.github.io/blog" target="_blank">内嵌博客</a><br>
-                            <a href="https://wuyouthink.blogspot.com" target="_blank">Blogspot（谷歌）</a>
+                            <a href="#" target="_blank"><s>内嵌博客</s></a><br>
+                            <a href="https://wuyouthink.blogspot.com" target="_blank">Blogspot</a>
                         </div>
 
                         <hr>
@@ -153,31 +149,27 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.fancybox.js"></script>
+    <!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
+    <script src="instantpage.js" type="module"></script>
+    <script src="lazysizes.min.js" async></script>
     <!-- aplayer、meting -->
     <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="APlayer.min.css">
+    <script src="APlayer.min.js"></script>
     <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script src="Meting.min.js"></script>
 
     <!-- nplayer -->
-    <script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
-
-    <!--   随机刷新观点   -->
-    <script src="https://wuu0417.github.io/personal/hitokoto.js" defer></script>
-    <script src="https://wuu0417.github.io/personal/jinrishici.js" defer></script>
+    <script src="nplayer.index.min.js"></script>
 
     <!-- 看板娘 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <script src="autoload.js"></script>
 
     <!--鼠标点击效果-->
-    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+    <script src="maodian.js"></script>
 
     <script type="text/javascript">
         console.clear();
@@ -195,7 +187,7 @@
                         minSize: 10,
                         maxSize: 20,
                         newOn: 1000,
-                        flakeColor: "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+                        flakeColor: "#FFC0CB" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
                     },
                     options = $.extend({}, defaults, options);
                 var interval = setInterval(function () {
@@ -222,9 +214,9 @@
         })(jQuery);
         $(function () {
             $.fn.snow({
-                minSize: 5, /* 定义雪花最小尺寸 */
+                minSize: 50, /* 定义雪花最小尺寸 */
                 maxSize: 50,/* 定义雪花最大尺寸 */
-                newOn: 400  /* 定义密集程度，数字越小越密集 */
+                newOn: 40  /* 定义密集程度，数字越小越密集 */
             });
         });
 
