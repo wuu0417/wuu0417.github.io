@@ -10,9 +10,9 @@
     <meta name="keywords" content="优酱，个人主页">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://wuu0417.github.io/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="jquery.fancybox.css">
+    <link rel="stylesheet" href="/requirements/index.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/requirements/jquery.fancybox.css">
     <script type="text/javascript">
         if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
             alert('朋友，上古浏览器不支持呢~');
@@ -26,7 +26,7 @@
             <div id="page_site-info">
                 <div id="site-title">
                     <span class="blogtitle"></span>
-                    <script src="typed.js"></script>
+                    <script src="/requirements/typed.js"></script>
                     <script>
                         var typed = new Typed(".blogtitle", {
                             strings: ['合作共赢，无限进步！'],
@@ -128,32 +128,32 @@
             </div>
         </footer>
     </div>
-    <script src="jquery.min.js"></script>
-    <script src="jquery.fancybox.js"></script>
+    <script src="/requirements/jquery.min.js"></script>
+    <script src="/requirements/jquery.fancybox.js"></script>
     <!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
-    <script src="instantpage.js" type="module"></script>
-    <script src="lazysizes.min.js" async></script>
+    <script src="/requirements/instantpage.js" type="module"></script>
+    <script src="/requirements/lazysizes.min.js" async></script>
     <!-- aplayer、meting -->
     <!-- require APlayer -->
-    <link rel="stylesheet" href="APlayer.min.css">
-    <script src="APlayer.min.js"></script>
+    <link rel="stylesheet" href="/requirements/APlayer.min.css">
+    <script src="/requirements/APlayer.min.js"></script>
     <!-- require MetingJS -->
-    <script src="Meting.min.js"></script>
+    <script src="/requirements/Meting.min.js"></script>
 
     <!-- nplayer -->
-    <script src="nplayer.index.min.js"></script>
+    <script src="/requirements/nplayer.index.min.js"></script>
 
     <!-- 看板娘 -->
-    <link rel="stylesheet" href="font-awesome.min.css">
-    <script src="autoload.js"></script>
+    <link rel="stylesheet" href="/requirements/font-awesome.min.css">
+    <script src="/requirements/autoload.js"></script>
 
     <!--鼠标点击效果-->
-    <script src="maodian.js"></script>
+    <script src="/requirements/maodian.js"></script>
 
     <script type="text/javascript">
         console.clear();
         console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
-        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/laoxuai");
+        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/wuu0417");
         console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
 
 
@@ -166,7 +166,7 @@
                         minSize: 10,
                         maxSize: 20,
                         newOn: 1000,
-                        flakeColor: "#FFC0CB" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+                        flakeColor: "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
                     },
                     options = $.extend({}, defaults, options);
                 var interval = setInterval(function () {
@@ -195,7 +195,7 @@
             $.fn.snow({
                 minSize: 10, /* 定义雪花最小尺寸 */
                 maxSize: 50,/* 定义雪花最大尺寸 */
-                newOn: 150  /* 定义密集程度，数字越小越密集 */
+                newOn: 120  /* 定义密集程度，数字越小越密集 */
             });
         });
 
