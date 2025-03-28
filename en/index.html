@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <title>YouJiang's Personal Homepage</title>
+    <meta name="description" content="YouJiang's Personal Homepage">
+    <meta name="keywords" content="YouJiang, Personal Homepage">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="/requirements/index.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/requirements/jquery.fancybox.css">
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('Your browser is too old!');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="body-wrap">
+        <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">
+            <div id="page_site-info">
+                <div id="site-title">
+                    <span class="blogtitle"></span>
+                    <script src="/requirements/typed.js"></script>
+                    <script>
+                        var typed = new Typed(".blogtitle", {
+                            strings: ['Hi,I am Youjiang'],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            showCursor: true
+                        });
+                    </script>
+                </div>
+            </div>
+        </nav>
+        <main id="content-outer">
+            <div class="layout_page" id="content-inner">
+                <div class="aside_content" id="aside_content">
+                    <div class="card-widget card-info">
+                        <div class="card-content">
+                            <div class="card-info-avatar is-center">
+                                <img class="avatar-img"
+                                    src="/personal/myself/photo2.png"
+                                    alt="avatar">
+                                <div class="author-info__name">Youjiang</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                <span>Notice Board</span>
+                            </div>
+                            <div class="author-info__description">None yet</div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span>Birthday</span>
+                            </div>
+                            <div class="author-info__description">Apirl 17, 2003</div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <span>Website Statistics</span>
+                            </div>
+                            <div class="webinfo">
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-uv-name">Number of Visitors :</div>
+                                    <div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
+                                </div>
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-name">Total Visits :</div>
+                                    <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article id="page">
+                    <div class="article-container">
+                        <h2>Music Player</h2>
+                        <meting-js auto="https://music.163.com/#/my/m/music/playlist?id=12920377667">
+                        </meting-js>
+
+                        <hr>
+                        <h2>My Blogs</h2>
+                        <div class="tool">
+                            <a href="https://blog.wuu0417.xyz" target="_blank">Blog 1</a><br>
+                            <a href="/blog" target="_blank">Blog 2</a>
+                        </div>
+                        
+                        <hr>
+                        <h2>My Resource Library</h2>
+                        <div class="tool">
+                            <a href="/my_files" target="_blank">Go browse</a>
+                        </div>
+                        
+                        <hr>
+                        <h2>Appreciate</h2>
+                        <div class="tool">
+                            <a href="https://github.com/wexuo/home/" target="_blank">Website Templates</a><br>
+                            <a href="https://pages.github.com/" target="_blank">Github Pages Service</a>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer id="footer">
+            <div id="footer-wrap">
+                <div class="copyright">&copy;YouJiang's Personal Homepage 2024-2025</div>
+            </div>
+        </footer>
+    </div>
+    <script src="/requirements/jquery.min.js"></script>
+    <script src="/requirements/jquery.fancybox.js"></script>
+    <!--<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
+    <script src="/requirements/instantpage.js" type="module"></script>
+    <script src="/requirements/lazysizes.min.js" async></script>
+    <!-- aplayer、meting -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="/requirements/APlayer.min.css">
+    <script src="/requirements/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="/requirements/Meting.min.js"></script>
+
+    <!-- nplayer -->
+    <script src="/requirements/nplayer.index.min.js"></script>
+
+    <!-- 看板娘 -->
+    <link rel="stylesheet" href="/requirements/font-awesome.min.css">
+    <script src="/requirements/autoload.js"></script>
+
+    <!--Mouse click effects-->
+    <script src="/requirements/maodian.js"></script>
+
+    <script type="text/javascript">
+        console.clear();
+        console.log("%c Welcome friends.", "background:#24272A; color:#ffffff", "");
+        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/wuu0417");
+        console.log("%c Version Number: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+
+
+        (function ($) {
+            $.fn.snow = function (options) {
+                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
+                    documentHeight = $(document).height(),
+                    documentWidth = $(document).width(),
+                    defaults = {
+                        minSize: 10,
+                        maxSize: 20,
+                        newOn: 1000,
+                        flakeColor: "#FFFFFF" /* Set the snowflake color, for example white is #FFFFFF */
+                    },
+                    options = $.extend({}, defaults, options);
+                var interval = setInterval(function () {
+                    var startPositionLeft = Math.random() * documentWidth - 100,
+                        startOpacity = 0.5 + Math.random(),
+                        sizeFlake = options.minSize + Math.random() * options.maxSize,
+                        endPositionTop = documentHeight - 200,
+                        endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+                        durationFall = documentHeight * 10 + Math.random() * 5000;
+                    $flake.clone().appendTo('body').css({
+                        left: startPositionLeft,
+                        opacity: startOpacity,
+                        'font-size': sizeFlake,
+                        color: options.flakeColor
+                    }).animate({
+                        top: endPositionTop,
+                        left: endPositionLeft,
+                        opacity: 0.2
+                    }, durationFall, 'linear', function () {
+                        $(this).remove()
+                    });
+                }, options.newOn);
+            };
+        })(jQuery);
+        $(function () {
+            $.fn.snow({
+                minSize: 10, /* Minimum snowflake size */
+                maxSize: 50,/* Minimum snowflake size */
+                newOn: 120  /* Snowflake density (smaller, denser) */
+            });
+        });
+
+        // Funny browser titles
+        var OriginTitle = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                // $('[rel="icon"]').attr('href', "/funny.ico");
+                document.title = '╭(°A°`)╮ Page crashed ~';
+                clearTimeout(titleTime);
+            }
+            else {
+                $('[rel="icon"]').attr('href', "/favicon.ico");
+                document.title = '(ฅ>ω<*ฅ) Page backed ~' + OriginTitle;
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitle;
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+
+</html>
