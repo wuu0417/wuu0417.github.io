@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
 Disallow: /requirements
 Disallow: /blog
 Disallow: /fontawesome
