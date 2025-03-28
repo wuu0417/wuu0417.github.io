@@ -3,3 +3,5 @@ Disallow: /requirements/
 Disallow: /blog/
 Disallow: /fontawesome/
 Disallow: /personal/
+Disallow: /loverpage/
+Disallow: /en/
