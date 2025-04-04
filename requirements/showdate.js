@@ -10,7 +10,7 @@ function updateTimeAndDifference() {
             const years = Math.floor(days / 365.25);
 
             document.getElementById("current-time").textContent = now.toLocaleString();
-            document.getElementById("difference-time").textContent = `我已经诞生了：\n${years}年 ${days % 365}天 ${(hours % 24)}小时 ${(minutes % 60)}分钟 ${(seconds % 60)}秒`;
+            document.getElementById("difference-time").textContent = `\n${years}年 ${days % 365}天 ${(hours % 24)}小时 ${(minutes % 60)}分钟 ${(seconds % 60)}秒`;
         }
 
         setInterval(updateTimeAndDifference, 1000);
