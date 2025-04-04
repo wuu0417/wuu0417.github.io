@@ -86,17 +86,17 @@
                     <div class="card-widget card-webinfo">
                         <div class="card-content">
                             <div class="item-headline">
-                                <i class="fa fa-line-chart" aria-hidden="true"></i>
-                                <span>站点统计</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <span>时间统计</span>
                             </div>
                             <div class="webinfo">
                                 <div class="webinfo-item">
-                                    <div class="webinfo-site-uv-name">访客数 :</div>
-                                    <div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
+                                    <div class="webinfo-site-name">当前时间 :</div>
+                                    <div class="webinfo-site-time" id="current-time"></div>
                                 </div>
                                 <div class="webinfo-item">
-                                    <div class="webinfo-site-name">总访问量 :</div>
-                                    <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+                                    <div class="webinfo-site-name">我来到人间已经 :</div>
+                                    <div class="webinfo-site-diff" id="difference-time"></div>
                                 </div>
                             </div>
                         </div>
@@ -159,6 +159,9 @@
 
     <!--鼠标点击效果-->
     <script src="/requirements/maodian.js"></script>
+
+    <!--显示日期-->
+    <script src="requirements/showdate.js"></script>
 
     <script type="text/javascript">
         console.clear();
