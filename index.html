@@ -125,8 +125,8 @@
                         <hr>
                         <h2>文件共享站</h2>
                         <div class="tool">
-                            <p>由于个人时间有限，此板块已停止维护</p>
                             <a href="/my_files" target="_blank">访问</a>
+                            <p>注：由于个人时间有限，此板块已停止维护，但仍可访问浏览</p>
                         </div>
 
                     </div>
@@ -224,12 +224,12 @@
         document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
                 // $('[rel="icon"]').attr('href', "/funny.ico");
-                document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+                document.title = '╭(°A°`)╮ 你不要我了吗 ~';
                 clearTimeout(titleTime);
             }
             else {
                 $('[rel="icon"]').attr('href', "/favicon.ico");
-                document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
+                document.title = '(ฅ>ω<*ฅ) 欢迎主人 ~' + OriginTitle;
                 titleTime = setTimeout(function () {
                     document.title = OriginTitle;
                 }, 2000);
