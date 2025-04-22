@@ -1,5 +1,8 @@
 // 单独展示签名的JS文件
 
+document.getElementById("signature").innerText =
+  "所谓的好人，不过是承认自己是坏人，又忍不住去做点举手之劳的好事的普通人。";
+
 /**
 
 document.getElementById("signature").innerText =
@@ -9,6 +12,8 @@ document.getElementById("signature").innerText =
   "3.只记住这两句话就够了，不用多想其它方面的事情。" ;
 
 **/
+
+/**
 
 const texts = [
   "这里是优酱的主页୧( ⁼̴̶̤̀ω⁼̴̶̤ )૭",
@@ -29,3 +34,5 @@ function cycleText() {
 cycleText();
 // 每隔 interval 毫秒循环一次
 setInterval(cycleText, interval);
+
+**/
