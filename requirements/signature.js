@@ -17,12 +17,12 @@ const texts = [
 ];
 
 let currentIndex = 0;
-const displayElement = document.getElementById("text-display");
+const displayElement = document.getElementById("signature"); // 修改了这里的 ID
 const interval = 5000; // 5秒
 
 function cycleText() {
-displayElement.textContent = texts[currentIndex];
-currentIndex = (currentIndex + 1) % texts.length;
+  displayElement.textContent = texts[currentIndex];
+  currentIndex = (currentIndex + 1) % texts.length;
 }
 
 // 初始显示一次
