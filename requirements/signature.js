@@ -1,6 +1,6 @@
-/**
-
 // 单独展示签名的JS文件
+
+/**
 
 document.getElementById("signature").innerText =
   "我给自己三句话：\n" +
@@ -9,3 +9,23 @@ document.getElementById("signature").innerText =
   "3.只记住这两句话就够了，不用多想其它方面的事情。" ;
 
 **/
+
+const texts = [
+  "这里是优酱的主页୧( ⁼̴̶̤̀ω⁼̴̶̤ )૭",
+  "一直在等着你发现୧꒰•̀ᴗ•́꒱୨",
+  "来都来了不妨多看看吧ദ്ദി˶ｰ̀֊ｰ́ )✧"
+];
+
+let currentIndex = 0;
+const displayElement = document.getElementById("text-display");
+const interval = 5000; // 5秒
+
+function cycleText() {
+displayElement.textContent = texts[currentIndex];
+currentIndex = (currentIndex + 1) % texts.length;
+}
+
+// 初始显示一次
+cycleText();
+// 每隔 interval 毫秒循环一次
+setInterval(cycleText, interval);
