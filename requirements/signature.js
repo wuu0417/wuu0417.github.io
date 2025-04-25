@@ -1,8 +1,12 @@
 // 单独展示签名的JS文件
 
+
+/**
+
 document.getElementById("signature").innerText =
   "在接纳自己的基础上接纳别人";
 
+**/
 
 /**
 
@@ -21,17 +25,17 @@ document.getElementById("signature").innerText =
 
 **/
 
-/**
+
 
 const texts = [
-  "这里是优酱的主页୧( ⁼̴̶̤̀ω⁼̴̶̤ )૭",
-  "一直在等着你发现୧꒰•̀ᴗ•́꒱୨",
-  "来都来了不妨多看看吧ദ്ദി˶ｰ̀֊ｰ́ )✧"
+  "这里是优酱的主页👀",
+  "一直在等着你发现😍",
+  "来都来了不妨坐坐吧ദ്ദി˶ｰ̀֊ｰ́ )✧🌹"
 ];
 
 let currentIndex = 0;
 const displayElement = document.getElementById("signature"); // 修改了这里的 ID
-const interval = 5000; // 5秒
+const interval = 1300; // 单位毫秒
 
 function cycleText() {
   displayElement.textContent = texts[currentIndex];
@@ -43,4 +47,4 @@ cycleText();
 // 每隔 interval 毫秒循环一次
 setInterval(cycleText, interval);
 
-**/
+
