@@ -1,7 +1,15 @@
 // 单独展示签名的JS文件
 
 document.getElementById("signature").innerText =
+  "在接纳自己的基础上接纳别人";
+
+
+/**
+
+document.getElementById("signature").innerText =
   "所谓的好人，不过是承认自己是坏人，又忍不住去做点举手之劳的好事的普通人。";
+
+**/
 
 /**
 
