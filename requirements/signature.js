@@ -1,6 +1,9 @@
 // 单独展示签名的JS文件
 
 
+document.getElementById("signature").innerText =
+  "“去抓住你想抓住的，去握紧你想握紧的，这是能力的用武之地。”";
+
 /**
 
 document.getElementById("signature").innerText =
@@ -25,7 +28,7 @@ document.getElementById("signature").innerText =
 
 **/
 
-
+/**
 
 const texts = [
   "这里是优酱的主页👀",
@@ -48,3 +51,4 @@ cycleText();
 setInterval(cycleText, interval);
 
 
+**/
