@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /my_files
-Disallow: /requirements
+Allow: /requirements
 Disallow: /blog
 Disallow: /fontawesome
 Disallow: /personal
