@@ -1,9 +1,9 @@
 User-agent: *
-Disallow: /
+Allow: /
+Allow: /my_files
 Disallow: /requirements
 Disallow: /blog
 Disallow: /fontawesome
 Disallow: /personal
 Disallow: /loverpage
 Disallow: /en
-Allow: /my_files
