@@ -2,12 +2,208 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <title>个人主页重建中</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <title>优酱的个人主页</title>
+    <meta name="description" content="优酱的个人主页">
+    <meta name="keywords" content="优酱，个人主页">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="GzEvPlarbr2Dt_G_r93YNQkfmTa-3nZgrJBL3p9B9BY" />
+    <link rel="shortcut icon" href="requirements/icon/g_256x256.ico">
+    <link rel="stylesheet" href="/requirements/index.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/requirements/jquery.fancybox.css">
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('你的浏览器太旧了！推荐使用最新版Chrome');
+        }
+    </script>
 </head>
 
 <body>
-  <h1>个人主页重建中！</h1>
+    <div id="body-wrap">
+        
+        <nav class="not_index_bg" id="nav" style="background-image:url(requirements/background/IMG_20250527_125835.png)">
+            <div id="page_site-info">
+                <div id="site-title">
+                    <span class="blogtitle"></span>
+                    <script src="/requirements/typed.js"></script>
+                    
+                    <script>
+                        var typed = new Typed(".blogtitle", {
+                            strings: [' '],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: false,
+                            backSpeed: 50,
+                            showCursor: false
+                        });
+                    </script>
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <main id="content-outer">
+            
+            <div class="layout_page" id="content-inner">
+
+                <div class="aside_content" id="aside_content">
+                    
+                    <div class="card-widget card-info">
+                        <div class="card-content">
+                            <div class="card-info-avatar is-center">
+                                <img class="avatar-img"
+                                    src="https://q.qlogo.cn/g?b=qq&nk=1640548044&s=640"
+                                    alt="avatar"><!--主页头像跟随QQ头像-->
+                                <div class="author-info__name">优酱</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa-solid fa-user"></i>
+                                <span>关于我</span>
+                            </div>
+                            <div class="author-info__description">我的生日：2003年4月17日</div>
+                            <div class="author-info__description">当前时间：</div>
+                            <div class="author-info__description" id="current-time"></div>
+                            <div class="author-info__description">我在地球已经度过了：</div>
+                            <div class="author-info__description" id="difference-time"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+                <article id="page">
+                    
+                        <div class="article-container">
+                            <h2>我的歌单</h2>
+                            <meting-js auto="https://music.163.com/#/my/m/music/playlist?id=12920377667">
+                            </meting-js>
+                        </div>
+                            
+                        <hr>
+                        <h2>我的博客</h2>
+                        <div class="tool">
+                            <p>无论在什么时候，永远不要以为自己已经知道了一切，不管人们把你评价的多么高，但你永远要有勇气对自己说：我是个毫无所知的人。——伊万·巴甫洛夫</p>
+                            <a href="https://blog.wuu0417.xyz" target="_blank">我的博客</a><br>
+                        </div>
+
+                </article>
+                
+            </div>
+            
+        </main>
+            
+        <footer id="footer">
+            <div id="footer-wrap">
+                <div class="copyright">&copy;优酱的个人主页 2024-2025</div>
+            </div>
+        </footer>
+        
+    </div>
+
+
+    <script src="/requirements/jquery.min.js"></script>
+    <script src="/requirements/jquery.fancybox.js"></script>
+    <script src="/requirements/instantpage.js" type="module"></script>
+    <script src="/requirements/lazysizes.min.js" async></script>
+    <!-- aplayer、meting -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="/requirements/APlayer.min.css">
+    <script src="/requirements/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="/requirements/Meting.min.js"></script>
+
+    <!-- nplayer -->
+    <script src="/requirements/nplayer.index.min.js"></script>
+
+    <!-- 看板娘 -->
+    <link rel="stylesheet" href="/requirements/font-awesome.min.css">
+    <script src="/requirements/autoload.js"></script>
+
+    <!--鼠标点击效果-->
+    <script src="/requirements/maodian.js"></script>
+
+    <!--显示日期-->
+    <script src="requirements/showdate.js"></script>
+
+    <!--个性签名-->
+    <script src="requirements/signature.js"></script>
+
+    <script type="text/javascript">
+        console.clear();
+        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/wuu0417");
+        console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+
+
+        (function ($) {
+            $.fn.snow = function (options) {
+                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
+                    documentHeight = $(document).height(),
+                    documentWidth = $(document).width(),
+                    defaults = {
+                        minSize: 10,
+                        maxSize: 20,
+                        newOn: 1000,
+                        flakeColor: "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+                    },
+                    options = $.extend({}, defaults, options);
+                var interval = setInterval(function () {
+                    var startPositionLeft = Math.random() * documentWidth - 100,
+                        startOpacity = 0.5 + Math.random(),
+                        sizeFlake = options.minSize + Math.random() * options.maxSize,
+                        endPositionTop = documentHeight - 200,
+                        endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+                        durationFall = documentHeight * 10 + Math.random() * 5000;
+                    $flake.clone().appendTo('body').css({
+                        left: startPositionLeft,
+                        opacity: startOpacity,
+                        'font-size': sizeFlake,
+                        color: options.flakeColor
+                    }).animate({
+                        top: endPositionTop,
+                        left: endPositionLeft,
+                        opacity: 0.2
+                    }, durationFall, 'linear', function () {
+                        $(this).remove()
+                    });
+                }, options.newOn);
+            };
+        })(jQuery);
+        $(function () {
+            $.fn.snow({
+                minSize: 10, /* 定义雪花最小尺寸 */
+                maxSize: 20,/* 定义雪花最大尺寸 */
+                newOn: 500  /* 定义密集程度，数字越小越密集 */
+            });
+        });
+
+        // 浏览器搞笑标题
+        var OriginTitle = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                // $('[rel="icon"]').attr('href', "/funny.ico");
+                document.title = '╭(°A°`)╮ 你不要我了吗 ~';
+                clearTimeout(titleTime);
+            }
+            else {
+                $('[rel="icon"]').attr('href', "/favicon.ico");
+                document.title = '(ฅ>ω<*ฅ) 欢迎主人 ~' + OriginTitle;
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitle;
+                }, 2000);
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
