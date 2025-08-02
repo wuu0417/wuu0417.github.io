@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <title>优酱的个人主页</title>
+    <meta name="description" content="优酱的个人主页">
+    <meta name="keywords" content="优酱，个人主页">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="GzEvPlarbr2Dt_G_r93YNQkfmTa-3nZgrJBL3p9B9BY" />
+    <link rel="shortcut icon" href="requirements/icon/g_256x256.ico">
+    <link rel="stylesheet" href="/requirements/index.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/requirements/jquery.fancybox.css">
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('您的浏览器太旧啦！推荐使用最新版Chrome或Firefox');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="body-wrap">
+        
+        <nav class="not_index_bg" id="nav" style="background-image:url(requirements/background/animewallpaper2.jpeg)">
+            <div id="page_site-info">
+                <div id="site-title">
+                    <span class="blogtitle"></span>
+                    <script src="/requirements/typed.js"></script>
+                    
+                    <script>
+                        var typed = new Typed(".blogtitle", {
+                            strings: ['优酱的个人主页'],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: false,
+                            backSpeed: 50,
+                            showCursor: false
+                        });
+                    </script>
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <main id="content-outer">
+            
+            <div class="layout_page" id="content-inner">
+
+                <div class="aside_content" id="aside_content">
+                    
+                    <div class="card-widget card-info">
+                        <div class="card-content">
+                            <div class="card-info-avatar is-center">
+                                <img class="avatar-img"
+                                    src="https://q.qlogo.cn/g?b=qq&nk=1640548044&s=640"
+                                    alt="avatar"><!--主页头像跟随QQ头像-->
+                                <div class="author-info__name">优酱</div>
+                                <div class="author-info__description">ADHD<!--<br>新教徒<br>自由 独立 边界感分明<br>--> 自然一点</div>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa-solid fa-user"></i>
+                                <span>站主信息</span>
+                            </div>
+                            <div class="author-info__description">我的生日：2003年4月17日</div>
+                            <div class="author-info__description">当前时间：</div>
+                            <div class="author-info__description" id="current-time"></div>
+                            <div class="author-info__description">我在地球已经度过了：</div>
+                            <div cl="author-info__description" id="difference-time"></div>
+                            <div class="author-info__description">政治立场：自由主义，和平主义</div>
+                                <div class="author-info__description">宗教信仰：无神论或新教（未决定）</div>
+                                <div class="author-info__description">个人色彩：自由，独立，边界感分明</div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa-solid fa-user"></i>
+                                <span>社交账号</span>
+                            </div>
+                            <div class="author-info__description">微信: wuu0417x </div>
+                            <div class="author-info__description">QQ: - </div>
+                            <div class="author-info__description">Instagram: wuu0417 </div>
+                            <div class="author-info__description">Discord: wuu0417 </div>
+                            <div class="author-info__description">Telegram: - </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+                <article id="page">
+                    
+                        <div class="article-container">
+                            <h2>我的歌单</h2>
+                            <meting-js auto="https://music.163.com/#/my/m/music/playlist?id=12920377667">
+                            </meting-js>
+                        </div>
+                        
+                        <hr>
+                        <h2>好朋友留影墙</h2>
+                        <div class="tool">
+                            <p>Jin Hengbin</p>
+                            <p>Edgar Wang</p>
+                            <p>Cao Yinuo</p>
+                            <p><s>Zhang Yutang</s></p>
+                            <p>Lin Zhenru</p>
+                            <p>Anko</p>
+                            <p>Xen</p>
+                            <p>Wu You(Does not me)</p>
+                            <p>Riko</p>
+                            <p>Many friends of Qzone</p>
+                            <p>小玖姐姐</p>
+                            <p>SnowFox</p>
+                            <p>Hanyu(?)</p>
+                        </div>
+
+                        <hr>
+                        <h2>匿名留言墙</h2>
+                        <div class="tool">
+                            <p>我打算开发一个匿名留言墙，你可以在不用留下任何身份信息的前提下，在这里写下对我说的话。留言墙目前还没开发，开发完成后我会把入口放在这里。</p>
+                        </div>
+
+                        <hr>
+                        <h2>ADHD互助板块</h2>
+                        <div class="tool">
+                            <p><b>你应该了解的ADHD相关定义</b></p>
+                            <p>维基百科-ADHD：<a href="https://zh.wikipedia.org/zh-cn/%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8D%E8%B6%B3%E9%81%8E%E5%8B%95%E7%97%87">点击链接</a></p>
+                            <p>维基百科-过度专注：<a href="https://zh.wikipedia.org/wiki/%E9%81%8E%E5%BA%A6%E5%B0%88%E6%B3%A8">点击链接</a></p>
+                            <p><b>ADHD自助知识</b></p>
+                            <p>ADHD适应自己思维的方法：<a href="https://wuu0417.github.io/ADHD-Help/ADHD适应自己思维的方法.html">查看</a></p>
+                            <p>为什么ADHD个体对外部监督和他人反应很强：<a href="https://wuu0417.github.io/ADHD-Help/为什么ADHD个体对外部监督和他人反应很强.html">查看</a></p>
+                            <p>ADHD与抽动秽语综合征的关系：<a href="https://wuu0417.github.io/ADHD-Help/ADHD与抽动秽语综合征的关系.html">查看</a></p>
+                            <p>ADHD应该怎么处理人际关系：<a href="https://wuu0417.github.io/ADHD-Help/ADHD应该怎么处理人际关系.html">查看</a></p>
+                        </div>
+
+                        <hr>
+                        <h2>基督教相关</h2>
+                        <div class="tool">
+                            <p><b>历史与基础知识</b></p>
+                            <p>维基百科-基督教：<a href="https://zh.wikipedia.org/zh-cn/%E5%9F%BA%E7%9D%A3%E6%95%99">点击链接</a></p>
+                            <p>基督教三大教派关系概述：<a href="https://wuu0417.github.io/Christianity/基督教三大教派关系概述.html">查看</a></p>
+                            <p>维基百科-圣经：<a href="https://zh.wikipedia.org/zh-cn/%E8%81%96%E7%B6%93">点击链接</a></p>
+                            <p><b>新教相关</b></p>
+                            <p>新教徒行为与信仰生活简明指引：<a href="https://wuu0417.github.io/Christianity/新教徒行为与信仰生活简明指引.html">查看</a></p>
+                            <p>维基百科-五个唯独：<a href="https://zh.wikipedia.org/zh-cn/%E4%BA%94%E4%B8%AA%E5%94%AF%E7%8B%AC">点击链接</a></p>
+                        </div>
+
+                        <hr>
+                        <h2>待开发板块</h2>
+                        <div class="tool">
+                            <p>未定义</p>
+                        </div>
+
+                        <hr>
+                        <h2>待开发板块</h2>
+                        <div class="tool">
+                            <p>未定义</p>
+                        </div>
+                            
+                        <!-- 注释 25/7/29 -->
+                        <!--
+                        <hr>
+                        <h2>我的博客</h2>
+                        <div class="tool">
+                            <a href="https://blog.wuu0417.xyz" target="_blank">我的博客</a><br>
+                        </div>
+                        -->
+
+                </article>
+                
+            </div>
+            
+        </main>
+            
+        <footer id="footer">
+            <div id="footer-wrap">
+                <div class="copyright">&copy;优酱的个人主页 2024-2025</div>
+            </div>
+        </footer>
+        
+    </div>
+
+
+    <script src="/requirements/jquery.min.js"></script>
+    <script src="/requirements/jquery.fancybox.js"></script>
+    <script src="/requirements/instantpage.js" type="module"></script>
+    <script src="/requirements/lazysizes.min.js" async></script>
+    <!-- aplayer、meting -->
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="/requirements/APlayer.min.css">
+    <script src="/requirements/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="/requirements/Meting.min.js"></script>
+
+    <!-- nplayer -->
+    <script src="/requirements/nplayer.index.min.js"></script>
+
+    <!-- 看板娘 -->
+    <link rel="stylesheet" href="/requirements/font-awesome.min.css">
+    <script src="/requirements/autoload.js"></script>
+
+    <!--鼠标点击效果-->
+    <script src="/requirements/maodian.js"></script>
+
+    <!--显示日期-->
+    <script src="requirements/showdate.js"></script>
+
+    <!--个性签名-->
+    <script src="requirements/signature.js"></script>
+
+    <script type="text/javascript">
+        console.clear();
+        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/wuu0417");
+        console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+
+
+        (function ($) {
+            $.fn.snow = function (options) {
+                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
+                    documentHeight = $(document).height(),
+                    documentWidth = $(document).width(),
+                    defaults = {
+                        minSize: 10,
+                        maxSize: 20,
+                        newOn: 1000,
+                        flakeColor: "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+                    },
+                    options = $.extend({}, defaults, options);
+                var interval = setInterval(function () {
+                    var startPositionLeft = Math.random() * documentWidth - 100,
+                        startOpacity = 0.5 + Math.random(),
+                        sizeFlake = options.minSize + Math.random() * options.maxSize,
+                        endPositionTop = documentHeight - 200,
+                        endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+                        durationFall = documentHeight * 10 + Math.random() * 5000;
+                    $flake.clone().appendTo('body').css({
+                        left: startPositionLeft,
+                        opacity: startOpacity,
+                        'font-size': sizeFlake,
+                        color: options.flakeColor
+                    }).animate({
+                        top: endPositionTop,
+                        left: endPositionLeft,
+                        opacity: 0.2
+                    }, durationFall, 'linear', function () {
+                        $(this).remove()
+                    });
+                }, options.newOn);
+            };
+        })(jQuery);
+        $(function () {
+            $.fn.snow({
+                minSize: 10, /* 定义雪花最小尺寸 */
+                maxSize: 20,/* 定义雪花最大尺寸 */
+                newOn: 500  /* 定义密集程度，数字越小越密集 */
+            });
+        });
+
+        // 浏览器搞笑标题
+        var OriginTitle = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                // $('[rel="icon"]').attr('href', "/funny.ico");
+                document.title = '╭(°A°`)╮ 你不要我了吗 ~';
+                clearTimeout(titleTime);
+            }
+            else {
+                $('[rel="icon"]').attr('href', "/favicon.ico");
+                document.title = '(ฅ>ω<*ฅ) 欢迎主人 ~' + OriginTitle;
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitle;
+                }, 2000);
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
