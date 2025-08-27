@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/requirements/jquery.fancybox.css">
     <script type="text/javascript">
         if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-            alert('您的浏览器太旧啦！推荐使用最新版Chrome或Firefox');
+            alert('您的浏览器太旧了！推荐使用最新版Chrome或Firefox');
         }
     </script>
 </head>
@@ -35,7 +35,7 @@
                             strings: ['优酱的个人主页'],
                             startDelay: 300,
                             typeSpeed: 100,
-                            loop: false,
+                            loop: true,
                             backSpeed: 50,
                             showCursor: true
                         });
@@ -56,9 +56,8 @@
                             <div class="card-info-avatar is-center">
                                 <img class="avatar-img"
                                     src="https://q.qlogo.cn/g?b=qq&nk=1640548044&s=640"
-                                    alt="avatar"><!--主页头像跟随QQ头像-->
+                                    alt="avatar"><!-- 主页头像跟随QQ头像 -->
                                 <div class="author-info__name">优酱</div>
-                                <div class="author-info__name">有逻辑的随心而行，遇事拆事<br>自然成长，而不是刻意成长</div>
                             </div>
                         </div>
                     </div>
@@ -66,7 +65,7 @@
                     <div class="card-widget card-webinfo">
                         <div class="card-content">
                             <div class="item-headline">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-regular fa-user"></i>
                                 <span>关于我</span>
                             </div>
                             <div class="author-info__description">生日：2003年4月17日</div>
@@ -80,30 +79,40 @@
                     <div class="card-widget card-webinfo">
                         <div class="card-content">
                             <div class="item-headline">
-                                <i class="fa-solid fa-user"></i>
-                                <span>社交账号</span>
+                                <i class="fa-regular fa-face-smile"></i>
+                                <span>座右铭</span>
                             </div>
-                            <div class="author-info__description">WeChat: - </div>
-                            <div class="author-info__description">QQ: - </div>
-                            <div class="author-info__description">Instagram: - </div>
-                            <div class="author-info__description">Discord: - </div>
-                            <div class="author-info__description">Telegram: - </div>
+                            <div class="author-info__description">有逻辑的随心而行，遇事拆事</div>
+                            <div class="author-info__description">自然成长，而不是刻意成长</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa-regular fa-comment"></i>
+                                <span>关注我</span>
+                            </div>
+                            <div class="author-info__description">Instagram: <a href="https://www.instagram.com/wuu0417">关注</a></div>
+                            <div class="author-info__description">Github主页: <a href="https://github.com/wuu0417">访问</a></div>
+                            <div class="author-info__description">给我发邮件: <a href="mailto:wuu0417@gmail.com">点击发送</a></div>
                         </div>
                     </div>
                     
                 </div>
 
+                <!-- 功能板块的命名理念应是“访问者能做什么” -->
                 
                 <article id="page">
                     
                         <div class="article-container">
-                            <h2>音乐播放器</h2>
+                            <h2>播放音乐</h2>
                             <meting-js auto="https://music.163.com/#/my/m/music/playlist?id=12920377667">
                             </meting-js>
                         </div>
 
                         <hr>
-                        <h2>强迫障碍</h2>
+                        <h2>强迫障碍-科普</h2>
                         <div class="tool">
                             <p><b>定义</b></p>
                             <p>强迫障碍（OCD）-症状与病因-妙佑医疗国际：<a href="https://www.mayoclinic.org/zh-hans/diseases-conditions/obsessive-compulsive-disorder/symptoms-causes/syc-20354432">点击访问</a></p>
@@ -113,7 +122,7 @@
                         </div>
 
                         <hr>
-                        <h2>完美主义</h2>
+                        <h2>完美主义-科普</h2>
                         <div class="tool">
                             <p><b>定义</b></p>
                             <p>维基百科-完美主义：<a href="https://zh.wikipedia.org/zh-cn/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89">点击访问</a></p>
@@ -125,15 +134,15 @@
 
 
                         <hr>
-                        <h2>我的博客</h2>
+                        <h2>访问我的博客</h2>
                         <div class="tool">
                             <p>博客首页：<a href="https://blog.wuu0417.xyz">进入</p>
                         </div>
 
                         <hr>
-                        <h2>文件共享站（旧）</h2>
+                        <h2>访问文件共享站</h2>
                         <div class="tool">
-                            <a href="https://wuu0417.github.io/my_files">进入</a>
+                            <p>文件共享站首页：<a href="https://wuu0417.github.io/my_files">进入</a>（规划重新建设中）</p>
                         </div>
 
                 </article>
@@ -145,6 +154,7 @@
         <footer id="footer">
             <div id="footer-wrap">
                 <div class="copyright">&copy;优酱的个人主页 2024-2025</div>
+                <div class="copyright">最后编辑日期：2025年8月27日 有问题请联系站长</div>
             </div>
         </footer>
         
@@ -155,17 +165,10 @@
     <script src="/requirements/jquery.fancybox.js"></script>
     <script src="/requirements/instantpage.js" type="module"></script>
     <script src="/requirements/lazysizes.min.js" async></script>
-    <!-- aplayer、meting -->
-    <!-- require APlayer -->
     <link rel="stylesheet" href="/requirements/APlayer.min.css">
     <script src="/requirements/APlayer.min.js"></script>
-    <!-- require MetingJS -->
     <script src="/requirements/Meting.min.js"></script>
-
-    <!-- nplayer -->
     <script src="/requirements/nplayer.index.min.js"></script>
-
-    <!-- 看板娘 -->
     <link rel="stylesheet" href="/requirements/font-awesome.min.css">
     <script src="/requirements/autoload.js"></script>
 
@@ -227,7 +230,7 @@
             });
         });
 
-        // 浏览器搞笑标题
+        // 浏览器动态标题
         var OriginTitle = document.title;
         var titleTime;
         document.addEventListener('visibilitychange', function () {
