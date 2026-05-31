@@ -28,6 +28,12 @@ https://space.bilibili.com/37858284
 林亦的YouTube频道
 https://youtube.com/@lyi
 
+廖雪峰的官方网站
+https://liaoxuefeng.com
+
+菜鸟教程
+https://www.runoob.com
+
 ### 历史与世界观
 
 大时叔叔的YouTube频道
@@ -54,4 +60,13 @@ https://youtube.com/@spacenw
 
 武志红讲心理的个人空间-哔哩哔哩
 https://space.bilibili.com/508670955
+
+### 杂谈
+
+你永远无法说服猴子说有一个上帝存在
+https://loveyouluobin.github.io
+
+## 我的书单
+
+### 哲学
 
