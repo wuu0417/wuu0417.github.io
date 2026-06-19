@@ -12,6 +12,9 @@ permalink: /about/
 
 微信公众号：优酱的平行宇宙（内容相同）
 
+关注我的微信读书主页，查看我的书架和帖子：
+[点击进入](https://weread.qq.com/review-detail?reviewid=87538271_89YdrI7jJ)
+
 <br>
 
 ---
