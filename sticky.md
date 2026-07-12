@@ -1,5 +1,5 @@
 ---
-layout: sticky
+layout: page
 title: 便利贴
 permalink: /sticky/
 ---
