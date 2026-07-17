@@ -1,6 +1,6 @@
 title: 优酱的博客
 description: 思考、记录与整理
-remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: pages-themes/hacker
 plugins:
 - jekyll-remote-theme 
 
