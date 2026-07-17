@@ -1,5 +1,8 @@
 title: 优酱的博客
-theme: minima
+description: 思考、记录与整理
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+- jekyll-remote-theme 
 
 header_pages:
   - index.md
