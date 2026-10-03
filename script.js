@@ -1,44 +1,42 @@
 (() => {
 
-  const universe = document.querySelector(".universe");
-  const line = document.querySelector(".red-line");
-
-  let timer;
+  const universe =
+    document.querySelector(".universe");
 
 
-  /*
-   * 鼠标移动时产生非常轻微的空间变化。
-   */
-  const pulse = () => {
+  const title =
+    document.querySelector(".title");
 
-    // 如果用户关闭了系统动画，则不执行动画
-    if (
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-    ) {
-      return;
-    }
 
-    universe.classList.add("is-moving");
-
-    clearTimeout(timer);
-
-    timer = setTimeout(() => {
-
-      universe.classList.remove("is-moving");
-
-    }, 180);
-
-  };
+  const line =
+    document.querySelector(".red-line");
 
 
   /*
-   * 监听鼠标移动
+   * 鼠标移动产生非常轻微的视差。
+   *
+   * 不改变页面结构，
+   * 只是让银河背景和标题产生一点空间感。
    */
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  let currentX = 0;
+  let currentY = 0;
+
+
   window.addEventListener(
     "pointermove",
-    pulse,
+    (event) => {
+
+      mouseX =
+        (event.clientX / window.innerWidth - 0.5);
+
+      mouseY =
+        (event.clientY / window.innerHeight - 0.5);
+
+    },
     {
       passive: true
     }
@@ -46,44 +44,88 @@
 
 
   /*
-   * 页面第一次打开时，
-   * 红线从中心向两边展开。
+   * 平滑动画
    */
-  window.addEventListener("load", () => {
 
-    if (
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-    ) {
-      return;
+  function animate() {
+
+    currentX +=
+      (mouseX - currentX) * 0.035;
+
+    currentY +=
+      (mouseY - currentY) * 0.035;
+
+
+    /*
+     * 银河背景轻微移动
+     */
+
+    const galaxy =
+      document.querySelector(".galaxy");
+
+    if (galaxy) {
+
+      galaxy.style.transform =
+        `scale(1.03)
+         translate(
+           ${currentX * -8}px,
+           ${currentY * -8}px
+         )`;
+
     }
 
-    line.animate(
 
-      [
-        {
-          transform: "scaleX(0)",
-          opacity: 0
-        },
+    /*
+     * 标题几乎感觉不到的移动
+     */
 
-        {
-          transform: "scaleX(1)",
-          opacity: 0.96
-        }
-      ],
+    if (title) {
 
-      {
-        duration: 1400,
+      title.style.transform =
+        `translate(
+          ${currentX * 2}px,
+          ${currentY * 2}px
+        )`;
 
-        easing:
-          "cubic-bezier(.16, 1, .3, 1)",
+    }
 
-        fill: "forwards"
-      }
 
+    /*
+     * 红线轻微移动
+     */
+
+    if (line) {
+
+      line.style.transform =
+        `scaleX(1)
+         translateX(${currentX * 5}px)`;
+
+    }
+
+
+    requestAnimationFrame(
+      animate
     );
 
-  });
+  }
+
+
+  /*
+   * 如果用户关闭系统动画，
+   * 不执行视差。
+   */
+
+  const reducedMotion =
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
+
+  if (!reducedMotion.matches) {
+
+    animate();
+
+  }
+
 
 })();
