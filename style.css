@@ -1,1 +1,164 @@
+@charset "UTF-8";
 
+/* =========================
+   基础变量
+   ========================= */
+
+:root {
+  --background: #f7f7f5;
+  --text: #111111;
+  --red: #e60012;
+}
+
+
+/* =========================
+   基础重置
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+
+  background: var(--background);
+  color: var(--text);
+
+  font-family:
+    "Helvetica Neue",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================
+   主页面
+   ========================= */
+
+.universe {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  isolation: isolate;
+}
+
+
+/* =========================
+   标题
+   ========================= */
+
+.title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+  padding: 0 6vw;
+
+  font-size: clamp(3rem, 8.6vw, 9.5rem);
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: -0.055em;
+
+  white-space: nowrap;
+  user-select: none;
+
+  transform: translateY(-1.5vh);
+
+  transition:
+    transform 900ms cubic-bezier(.16, 1, .3, 1),
+    letter-spacing 900ms cubic-bezier(.16, 1, .3, 1);
+}
+
+
+/* =========================
+   红线
+   ========================= */
+
+.red-line {
+  position: absolute;
+  z-index: 1;
+
+  left: -5vw;
+
+  width: 110vw;
+  height: 1px;
+
+  background: var(--red);
+
+  transform-origin: center;
+
+  opacity: 0.96;
+
+  transition:
+    transform 1100ms cubic-bezier(.16, 1, .3, 1),
+    opacity 700ms ease;
+}
+
+
+/* =========================
+   鼠标移动时
+   ========================= */
+
+.universe.is-moving .title {
+  transform:
+    translateY(-1.5vh)
+    scale(1.012);
+
+  letter-spacing: -0.045em;
+}
+
+.universe.is-moving .red-line {
+  opacity: 1;
+}
+
+
+/* =========================
+   手机端
+   ========================= */
+
+@media (max-width: 680px) {
+
+  .title {
+    padding: 0 7vw;
+
+    font-size: clamp(2.8rem, 13vw, 5.5rem);
+
+    letter-spacing: -0.065em;
+  }
+
+}
+
+
+/* =========================
+   用户关闭动画时
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .title,
+  .red-line {
+    transition: none;
+  }
+
+}
