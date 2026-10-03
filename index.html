@@ -1,28 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f7f7f5">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#05060b"
+  >
 
   <title>优酱的平行宇宙</title>
 
-  <link rel="stylesheet" href="/universe/style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
+
 
 <body>
 
   <main class="universe">
 
-    <!-- 中央红线 -->
-    <div class="red-line"></div>
+    <!--
+      银河背景
 
-    <!-- 页面唯一文字 -->
-    <h1 class="title">优酱的平行宇宙</h1>
+      以后只需要把你自己的图片放到：
+
+      assets/galaxy.jpg
+
+      就可以直接替换背景。
+
+      如果你想换文件名，
+      修改下面 url() 里的路径即可。
+    -->
+    <div class="galaxy"></div>
+
+
+    <!-- 背景遮罩 -->
+    <div class="overlay"></div>
+
+
+    <!-- 顶部导航 -->
+    <nav class="navigation">
+
+      <a
+        class="nav-link"
+        href="about.html"
+      >
+        关于我
+      </a>
+
+    </nav>
+
+
+    <!-- 页面中央 -->
+    <section class="hero">
+
+      <div class="red-line"></div>
+
+      <h1 class="title">
+        优酱的平行宇宙
+      </h1>
+
+    </section>
+
+
+    <!-- 底部极简文字 -->
+    <div class="footer">
+      A space for people to meet, help and create.
+    </div>
 
   </main>
 
-  <script src="/universe/script.js"></script>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>
